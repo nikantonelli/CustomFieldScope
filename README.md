@@ -3,6 +3,7 @@ CustomFieldScope
 
 ## Overview
 
+Create a list of projects that have artefacts in with a custom field defined
 
 ## License
 
