@@ -4,3 +4,11 @@
     border-width: 1px;
     margin: 10px;
 }
+
+.tableheader {
+    border-style: none none none none;
+    border-color: black;
+    border-width: 1px;
+    margin: 10px;
+    font-weight: bold;
+}

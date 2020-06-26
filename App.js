@@ -62,10 +62,14 @@ Ext.define('CustomApp', {
 //                                me.setLoading(Ext.String.format('Fetching info for {0} projects', Object.keys(sortedResults).length));
                                 me.setLoading(false);
                                 var list = Ext.ComponentQuery.query('#resultList')[0];
+                                list.add( { html: me._setDiv('Project Name', 'tableheader')});
+                                list.add( { html: me._setDiv('Artefact Count', 'tableheader')});
+                                list.add( { html: me._setDiv('Artefact List (up to 200 chars)', 'tableheader')});
+
                                 _.each(Object.keys(sortedResults), function(key) {
                                     list.add({ html: me._setDiv(key,'definedfield') });
                                     list.add({ html: me._setDiv(sortedResults[key].length,'definedfield')});
-                                    list.add({ html: me._setDiv(_.flatten(sortedResults[key], 'FormattedID').toString().slice(0,100), 'definedfield')});
+                                    list.add({ html: me._setDiv(_.flatten(sortedResults[key], 'FormattedID').toString().slice(0,200), 'definedfield')});
                                 });
                                 console.log(sortedResults);
                             },
